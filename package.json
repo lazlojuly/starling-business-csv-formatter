@@ -1,0 +1,23 @@
+{
+  "name": "starling-business-csv-formatter",
+  "version": "1.0.0",
+  "description": "Format bank statements",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lazlojuly/starling-business-csv-formatter.git"
+  },
+  "author": "lazlojuly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lazlojuly/starling-business-csv-formatter/issues"
+  },
+  "homepage": "https://github.com/lazlojuly/starling-business-csv-formatter#readme",
+  "dependencies": {
+    "csvtojson": "^2.0.8",
+    "json2csv": "^4.3.0"
+  }
+}
