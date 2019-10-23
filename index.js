@@ -1,4 +1,7 @@
 const fs = require("fs");
+require('dotenv').config()
+
+const fileName = process.env.SOURCE_CSV;
 
 const writeNewCSV = jsonObj => {
   const fields = ["Date", "Reference", "Paid out", "Paid in", "Balance"];
@@ -26,7 +29,7 @@ const writeNewCSV = jsonObj => {
     const parser = new Json2csvParser(opts);
     const csv = parser.parse(newStatement);
     console.log(csv);
-    fs.writeFile("StarlingStatement_2018-08-fixed.csv", csv, function(
+    fs.writeFile(`${fileName}-fixed.csv`, csv, function(
       err,
       data
     ) {
@@ -43,10 +46,9 @@ a,b,c
 1,2,3
 4,5,6
 */
-const csvFilePath = "<path to csv file>";
 const csv = require("csvtojson");
 csv()
-  .fromFile("./StarlingStatement_2018-08.csv")
+  .fromFile(`./${fileName}.csv`)
   .then(jsonObj => {
     writeNewCSV(jsonObj);
   });

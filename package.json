@@ -18,6 +18,7 @@
   "homepage": "https://github.com/lazlojuly/starling-business-csv-formatter#readme",
   "dependencies": {
     "csvtojson": "^2.0.8",
+    "dotenv": "^8.2.0",
     "json2csv": "^4.3.0"
   }
 }
